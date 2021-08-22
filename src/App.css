@@ -3,6 +3,17 @@
   pointer-events: none;
 }
 
+.App {
+  display: flex;
+}
+.main,
+.features {
+  flex: 1;
+}
+.main {
+  margin-left: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -52,4 +63,7 @@
 }
 .todo-text {
   margin-left: 10px;
+}
+button {
+  cursor: pointer;
 }

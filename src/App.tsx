@@ -4,6 +4,7 @@ import { CompletedTodos } from './components/CompletedTodos'
 import { NotCompletedTodos, Todo } from './components/NotCompletedTodos'
 import { v4 as uuidv4 } from 'uuid'
 import TodoForm from './components/TodoForm'
+import { Info } from './components/Info'
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([])
@@ -63,14 +64,18 @@ function App() {
 
   return (
     <div className="App">
-      <TodoForm onSubmit={handleSubmit} />
-      <NotCompletedTodos
-        todos={todos}
-        onDelete={handleDelete}
-        onToggleTodo={handleToggle}
-        onSortEnd={onSortEnd}
-      ></NotCompletedTodos>
-      <CompletedTodos todos={todos} onUncheckTodo={handleToggle} onDeleteTodo={handleDelete} />
+      <div className="main">
+        <h1>To-Do List</h1>
+        <TodoForm onSubmit={handleSubmit} />
+        <NotCompletedTodos
+          todos={todos}
+          onDelete={handleDelete}
+          onToggleTodo={handleToggle}
+          onSortEnd={onSortEnd}
+        ></NotCompletedTodos>
+        <CompletedTodos todos={todos} onUncheckTodo={handleToggle} onDeleteTodo={handleDelete} />
+      </div>
+      <Info />
     </div>
   )
 }
