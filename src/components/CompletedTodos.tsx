@@ -14,7 +14,7 @@ export const CompletedTodos = ({ todos, onUncheckTodo, onDeleteTodo }: Completed
   return (
     <ul>
       {completedTodos.map((todo) => (
-        <li className="completed-todo">
+        <li key={todo.id} className="completed-todo">
           <TodoItem
             todo={todo}
             onToggleTodo={() => onUncheckTodo(todo)}

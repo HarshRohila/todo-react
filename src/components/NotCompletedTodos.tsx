@@ -23,6 +23,7 @@ export const NotCompletedTodos = ({ todos, onDelete, onToggleTodo, onSortEnd }: 
         {notCompletedTodos.map((todo, idx) => (
           <SortableItem
             index={idx}
+            key={todo.id}
             component={<TodoItem todo={todo} onToggleTodo={onToggleTodo} onDelete={onDelete} />}
           />
         ))}
