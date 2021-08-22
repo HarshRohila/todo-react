@@ -1,8 +1,6 @@
 import React from 'react'
 
-type InfoProps = {}
-
-export const Info = ({}: InfoProps) => {
+export const Info = () => {
   return (
     <div className="features">
       <a href="https://github.com/HarshRohila/todo-react">Github</a>
