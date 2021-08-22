@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# To-Do List
+
+View app on [github pages](https://harshrohila.github.io/todo-react/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
